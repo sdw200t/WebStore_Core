@@ -1,0 +1,23 @@
+﻿@model IEnumerable<WebStore_Core.Models.Employee>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CardEmp</title>
+</head>
+<body>
+    <h3>Карточка сотрудника</h3>
+    <table class="table table-bordered">
+        <tr>
+            <td>@item.FirstName</td>
+            <td>@item.SurName</td>
+            <td>@item.Patronymic</td>
+            <td>@item.Age</td>
+        </tr>
+    </table>
+    <hr />
+    <a href="~/Home/Employees">Назд к списку</a>
+</body>
+</html>
