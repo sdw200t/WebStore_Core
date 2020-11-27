@@ -15,8 +15,8 @@ namespace WebStore_Core.Controllers
         private static readonly List<Employee> _Employees = new()
         {
             new Employee { Id = 1, LastName = "Ivanov", FirstName = "Ivan", Patronymic = "Ivanich", Age = 26 },
-            new Employee { Id = 1, LastName = "Ivanov", FirstName = "Ivan", Patronymic = "Ivanich", Age = 26 },
-            new Employee { Id = 1, LastName = "Ivanov", FirstName = "Ivan", Patronymic = "Ivanich", Age = 26 }
+            new Employee { Id = 2, LastName = "Ivanov", FirstName = "Ivan", Patronymic = "Ivanich", Age = 26 },
+            new Employee { Id = 3, LastName = "Ivanov", FirstName = "Ivan", Patronymic = "Ivanich", Age = 26 }
         };
 
         public HomeController(IConfiguration Configuration)

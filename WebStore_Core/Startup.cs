@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Builder;
+п»їusing Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
@@ -13,10 +13,10 @@ namespace WebStore_Core
 {
     public class Startup
     {
-        // объявили свойство хранения настроек конфигурации
+        // РѕР±СЉСЏРІРёР»Рё СЃРІРѕР№СЃС‚РІРѕ С…СЂР°РЅРµРЅРёСЏ РЅР°СЃС‚СЂРѕРµРє РєРѕРЅС„РёРіСѓСЂР°С†РёРё
         private readonly IConfiguration _Configuration;
 
-        // конструктор сохранения настроек конфигруации в свойстве
+        // РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃРѕС…СЂР°РЅРµРЅРёСЏ РЅР°СЃС‚СЂРѕРµРє РєРѕРЅС„РёРіСЂСѓР°С†РёРё РІ СЃРІРѕР№СЃС‚РІРµ
         public Startup(IConfiguration Configuration)
         {
             _Configuration = Configuration;
@@ -38,7 +38,7 @@ namespace WebStore_Core
                 app.UseDeveloperExceptionPage();
             }
 
-            // подключение использования статических файлов
+            // РїРѕРґРєР»СЋС‡РµРЅРёРµ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ СЃС‚Р°С‚РёС‡РµСЃРєРёС… С„Р°Р№Р»РѕРІ
             app.UseStaticFiles();
             app.UseRouting();
 
@@ -49,12 +49,12 @@ namespace WebStore_Core
                 //    await context.Response.WriteAsync("Hello World!");
                 //});
 
-                // подключение контроллера
+                // РїРѕРґРєР»СЋС‡РµРЅРёРµ РєРѕРЅС‚СЂРѕР»Р»РµСЂР°
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
-                // pattern: "{controller=index}/{action}/{id}"); // значение по умолчанию
-                // pattern: "{controller}/{action}/{id?}"); // не обязательный параметр
+                // pattern: "{controller=index}/{action}/{id}"); // Р·РЅР°С‡РµРЅРёРµ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
+                // pattern: "{controller}/{action}/{id?}"); // РЅРµ РѕР±СЏР·Р°С‚РµР»СЊРЅС‹Р№ РїР°СЂР°РјРµС‚СЂ
                 // http://localhost:52023/Products/Page/5 
             });
         }
