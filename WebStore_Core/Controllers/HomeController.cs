@@ -49,5 +49,14 @@ namespace WebStore_Core.Controllers
         {
             return View(_Employees[Id]);
         }
+
+        public IActionResult Blogs() => View();
+        public IActionResult BlogsSingle() => View();
+        public IActionResult Cart() => View();
+        public IActionResult CheckOut() => View();
+        public IActionResult ContactUs() => View();
+        public IActionResult Login() => View();
+        public IActionResult ProductsDetail() => View();
+        public IActionResult Shop() => View();
     }
 }
