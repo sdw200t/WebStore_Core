@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebStore_Core.Data;
 using WebStore_Core.Models;
 
 namespace WebStore_Core.Controllers
@@ -12,12 +13,7 @@ namespace WebStore_Core.Controllers
     {
 
         private readonly IConfiguration _Configuration;
-        private static readonly List<Employee> _Employees = new()
-        {
-            new Employee { Id = 1, LastName = "Ivanov", FirstName = "Ivan", Patronymic = "Ivanich", Age = 26 },
-            new Employee { Id = 2, LastName = "Ivanov", FirstName = "Ivan", Patronymic = "Ivanich", Age = 26 },
-            new Employee { Id = 3, LastName = "Ivanov", FirstName = "Ivan", Patronymic = "Ivanich", Age = 26 }
-        };
+
 
         public HomeController(IConfiguration Configuration)
         {
@@ -42,12 +38,7 @@ namespace WebStore_Core.Controllers
 
         public IActionResult Employees()
         {
-            return View(_Employees);
-        }
-
-        public IActionResult Details(int Id)
-        {
-            return View(_Employees[Id]);
+            return View(TestData.Employees);
         }
 
         public IActionResult Blogs() => View();
